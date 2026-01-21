@@ -270,6 +270,60 @@
             width: auto;
             border-radius: 24px;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 60px rgba(147, 51, 234, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .carousel-slide.active img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 16px;
+            box-shadow: 0 0 60px rgba(147, 51, 234, 0.3);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(147, 51, 234, 0.3);
+            border: 1px solid var(--purple-primary);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .lightbox-close:hover {
+            background: var(--purple-primary);
         }
 
         .carousel-dots {
@@ -510,19 +564,73 @@
                 </button>
                 <div class="carousel-track">
                     <div class="carousel-slide">
-                        <img src="images/report.PNG" alt="Vehicle Report - 2022 BMW M3">
+                        <img src="images/report.PNG" alt="Vehicle Report">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/ai analysis.PNG" alt="AI-Powered Vehicle Analysis">
+                        <img src="images/ai%20analysis.PNG" alt="AI-Powered Analysis">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/price analysis.PNG" alt="Price Analysis - Great Deal Indicator">
+                        <img src="images/price%20analysis.PNG" alt="Price Analysis">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/comparables.PNG" alt="Comparable Vehicles">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/similar%20vehicals.PNG" alt="Similar Vehicles">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2304.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2305.PNG" alt="App Screenshot">
                     </div>
                     <div class="carousel-slide">
                         <img src="images/IMG_2306.PNG" alt="Negotiation Helper">
                     </div>
                     <div class="carousel-slide">
-                        <img src="images/similar vehicals.PNG" alt="Similar Vehicles Comparison">
+                        <img src="images/IMG_2307.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2308.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2309.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2310.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2311.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2312.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2313.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2314.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2315.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2316.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2337.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2338.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2339.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2340.PNG" alt="App Screenshot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2341.PNG" alt="App Screenshot">
                     </div>
                 </div>
                 <button class="carousel-nav next" onclick="nextSlide()" aria-label="Next slide">
@@ -544,6 +652,12 @@
             </a>
         </div>
     </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">×</button>
+        <img src="" alt="Expanded screenshot" id="lightbox-img">
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -628,6 +742,41 @@
         const carouselContainer = document.querySelector('.carousel-container');
         carouselContainer.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
         carouselContainer.addEventListener('mouseleave', startAutoRotate);
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        // Add click handlers to all carousel images
+        slides.forEach(slide => {
+            const img = slide.querySelector('img');
+            img.addEventListener('click', () => {
+                if (slide.classList.contains('active')) {
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add('active');
+                    clearInterval(autoRotateInterval);
+                }
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            startAutoRotate();
+        }
+
+        // Close lightbox on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
     </script>
 </body>
 </html>
