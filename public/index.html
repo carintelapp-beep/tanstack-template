@@ -218,6 +218,130 @@
             font-size: 0.95rem;
         }
 
+        /* Screenshots Carousel Section */
+        .screenshots {
+            padding: 6rem 2rem;
+            background: var(--bg-dark);
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            height: 600px;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            transition: all 0.6s ease-in-out;
+            opacity: 0;
+            transform: scale(0.8) translateX(100px);
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+            transform: scale(1) translateX(0);
+            z-index: 3;
+        }
+
+        .carousel-slide.prev {
+            opacity: 0.5;
+            transform: scale(0.75) translateX(-320px);
+            z-index: 2;
+        }
+
+        .carousel-slide.next {
+            opacity: 0.5;
+            transform: scale(0.75) translateX(320px);
+            z-index: 2;
+        }
+
+        .carousel-slide img {
+            max-height: 550px;
+            width: auto;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 60px rgba(147, 51, 234, 0.2);
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: linear-gradient(135deg, var(--purple-primary), var(--pink-accent));
+            transform: scale(1.2);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(147, 51, 234, 0.3);
+            border: 1px solid var(--purple-primary);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .carousel-nav:hover {
+            background: var(--purple-primary);
+        }
+
+        .carousel-nav.prev {
+            left: 2rem;
+        }
+
+        .carousel-nav.next {
+            right: 2rem;
+        }
+
+        @media (max-width: 968px) {
+            .carousel-track {
+                height: 500px;
+            }
+
+            .carousel-slide img {
+                max-height: 450px;
+            }
+
+            .carousel-slide.prev,
+            .carousel-slide.next {
+                opacity: 0;
+            }
+
+            .carousel-nav {
+                display: none;
+            }
+        }
+
         /* CTA Section */
         .cta {
             padding: 6rem 2rem;
@@ -320,7 +444,6 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">First AI-Powered Car Buying App</div>
             <h1>The First <span>AI-Powered</span> Car Buying App</h1>
             <p class="hero-description">
                 Finally, an app built for the buyer. Get instant vehicle analysis, market values, recall alerts, and negotiation tips - all powered by AI.
@@ -374,6 +497,42 @@
         </div>
     </section>
 
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>See CarIntel in Action</h2>
+                <p>A glimpse at the powerful features that help you make smarter car buying decisions.</p>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-nav prev" onclick="prevSlide()" aria-label="Previous slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="images/report.PNG" alt="Vehicle Report - 2022 BMW M3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/ai analysis.PNG" alt="AI-Powered Vehicle Analysis">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/price analysis.PNG" alt="Price Analysis - Great Deal Indicator">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/IMG_2306.PNG" alt="Negotiation Helper">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/similar vehicals.PNG" alt="Similar Vehicles Comparison">
+                    </div>
+                </div>
+                <button class="carousel-nav next" onclick="nextSlide()" aria-label="Next slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta">
         <div class="section-container">
@@ -399,5 +558,76 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Carousel functionality
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        let currentSlide = 0;
+        let autoRotateInterval;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev', 'next');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else if (index === (currentSlide - 1 + slides.length) % slides.length) {
+                    slide.classList.add('prev');
+                } else if (index === (currentSlide + 1) % slides.length) {
+                    slide.classList.add('next');
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlides();
+            resetAutoRotate();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlides();
+            resetAutoRotate();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlides();
+            resetAutoRotate();
+        }
+
+        function startAutoRotate() {
+            autoRotateInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoRotate() {
+            clearInterval(autoRotateInterval);
+            startAutoRotate();
+        }
+
+        // Initialize
+        updateSlides();
+        startAutoRotate();
+
+        // Pause on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
+        carouselContainer.addEventListener('mouseleave', startAutoRotate);
+    </script>
 </body>
 </html>
