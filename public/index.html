@@ -1,153 +1,403 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarIntel - AI-Powered Car Buying Assistant</title>
-  <meta name="description" content="CarIntel is the first AI-powered car buying app.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#1a1a24;--purple:#9333ea;--pink:#d946ef;--green:#22c55e;--text:#fff;--muted:#a1a1aa;--border:#2d2d3a}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-nav{position:fixed;top:0;left:0;right:0;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
-.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#a855f7,var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  nav a{color:var(--muted);text-decoration:none;margin-left:2rem;font-size:0.9rem}
-nav a:hover{color:var(--text)}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem;background:radial-gradient(ellipse at top,rgba(147,51,234,0.15),transparent 50%)}
-  .hero-content{max-width:800px}
-  .badge{display:inline-block;background:rgba(147,51,234,0.2);border:1px solid rgba(147,51,234,0.3);padding:0.5rem 1rem;border-radius:50px;font-size:0.85rem;color:#a855f7;margin-bottom:1.5rem}
-h1{font-size:3.5rem;font-weight:800;line-height:1.1;margin-bottom:1.5rem}
-h1 span{background:linear-gradient(135deg,#a855f7,var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .desc{font-size:1.2rem;color:var(--muted);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
-.btn{display:inline-flex;align-items:center;gap:0.75rem;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;padding:1rem 2rem;border-radius:12px;font-weight:600;font-size:1.1rem;text-decoration:none;box-shadow:0 4px 20px rgba(147,51,234,0.4)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 6px 30px rgba(147,51,234,0.5)}
-.btn svg{width:24px;height:24px}
-.features{padding:6rem 2rem;background:var(--card)}
-.container{max-width:1200px;margin:0 auto}
-.section-title{text-align:center;margin-bottom:4rem}
-.section-title h2{font-size:2.5rem;margin-bottom:1rem}
-.section-title p{color:var(--muted);max-width:600px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
-.card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:2rem}
-.card:hover{border-color:var(--purple)}
-  .card h3{font-size:1.25rem;margin:1rem 0 0.75rem}
-.card p{color:var(--muted);font-size:0.95rem}
-.icon{width:48px;height:48px;background:linear-gradient(135deg,var(--purple),var(--pink));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
-.cta{padding:6rem 2rem;text-align:center;background:radial-gradient(ellipse at center,rgba(147,51,234,0.2),transparent 70%)}
-.cta h2{font-size:3rem;font-weight:800;margin-bottom:1rem}
-.cta p{color:var(--muted);font-size:1.2rem;margin-bottom:2rem}
-footer{padding:3rem 2rem;background:var(--card);border-top:1px solid var(--border);text-align:center}
-footer a{color:var(--muted);text-decoration:none;margin:0 1rem}
-footer a:hover{color:var(--text)}
-.copyright{color:var(--muted);font-size:0.85rem;margin-top:1rem}
-@media(max-width:768px){h1{font-size:2.5rem}.grid{grid-template-columns:1fr}}
-</style>
-  </head>
-  <body>
-  <nav><div class="logo">CarIntel</div><div><a href="#features">Features</a><a href="/privacy/">Privacy</a><a href="mailto:carintelapp@gmail.com">Contact</a></div></nav>
-  <section class="hero"><div class="hero-content">
-  <div class="badge">First AI-Powered Car Buying App</div>
-  <h1>Your <span>AI Co-Pilot</span> for Buying a Used Car</h1>
-  <p class="desc">Get instant vehicle analysis, market values, recall alerts, and negotiation tips - all powered by advanced AI.</p>
-  <a href="#" class="btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Coming Soon to iOS</a>
-  </div></section>
-  <section class="features" id="features"><div class="container">
-  <div class="section-title"><h2>Everything You Need to Buy Smart</h2><p>CarIntel combines AI analysis with real market data to give you confidence.</p></div>
-<div class="grid">
-<div class="card"><div class="icon">&#128269;</div><h3>Instant VIN Lookup</h3><p>Enter a VIN or scan with your camera. Get vehicle specs instantly.</p></div>
-  <div class="card"><div class="icon">&#129302;</div><h3>AI-Powered Analysis</h3><p>Our AI identifies problems, estimates repairs, and gives buy/avoid reco<m!mDeOnCdTaYtPiEo nhst.m<l/>p
-  ><<h/tdmilv >l
-  a<ndgi=v" ecnl"a>s
-  s<=h"ecaadr>d
-  "<>m<edtiav  cchlaarssse=t"=i"cUoTnF"->8&"#>1
-  2<8m1e7t6a; <n/admiev=>"<vhi3e>wRpeoarlt-"T icmoen tMeanrtk=e"tw iVdatlhu=edse<v/ihc3e>-<wpi>dStehe,  iifn iytoiua'lr-es cgaeltet=i1n.g0 "a> 
-  g<rteiattl ed>eCaalr Iwnittehl  l-i vAeI -mPaorwkeerte dd aCtaar. <B/upy>i<n/gd iAvs>s
-i<sdtiavn tc<l/atsist=l"ec>a
-r<dm"e>t<ad inva mcel=a"sdse=s"circiopnt"i>o&n#"1 2c8o7n3t7e;n<t/=d"iCva>r<Ihn3t>eSla fiest yt hAel efritrss<t/ hA3I>-<ppo>wAecrteidv ec arre cbaulyli nagl earptps.," >s
-a<fleitnyk  rharteifn=g"sh,t tapnsd: /c/ofmopnltasi.ngto ohgilsetaopriys..<c/opm>/<c/sdsi2v?>f
-a<mdiilvy =cIlnatsesr=:"wcgahrtd@"4>0<0d;i6v0 0c;l8a0s0s&=d"iiscpolna"y>=&s#w1a2p9"3 0r9e;l<=/"dsitvy>l<ehs3h>eNeetg"o>t
-i<asttiyolne >H
-e*l{pmearr<g/ihn3:>0<;pp>aAdId-icnagl:c0u;lbaotxe-ds iozfifnegr: bporridceers- baonxd} 
-n:ergoootti{a-t-ibogn: #t0aal0kai0nfg; -p-ocianrtds:.#<1/ap1>a<2/4d;i-v->p
-u<rdpilve :c#l9a3s3s3=e"ac;a-r-dp"i>n<kd:i#vd 9c4l6aesfs;=-"-igcroene"n>:&##2122c85257e9;;-<-/tdeixvt>:<#hf3f>fL;i-s-tmiuntge dC:h#eac1kae1ra<a/;h-3->b<opr>dPears:t#e2 da2ndy3 al}i
-sbtoidnyg{ fUoRnLt -tfoa mciolmyp:a'rIen taegra'i,nssatn sm-asrekreitf ;vbaalcukeg.r<o/upn>d<:/vdairv(>-
--<b/gd)i;vc>o
-l<o/rd:ivva>r<(/-s-etcetxito)n;>l
-i<nsee-chteiiognh tc:l1a.s6s}=
-"ncatva{"p>o<sdiitvi ocnl:afsisx=e"dc;otnotpa:i0n;elre"f>t
-:<0h;2r>iRgehatd:y0 ;tpoa dBduiyn gS:m1arretme r2?r<e/mh;2d>i
-s<ppl>aJyo:ifnl ecxa;rj ubsutyiefrys- cwohnot esnhto:ps pwaicteh- bceotnwfeiedne;naclei guns-iintge mCsa:rcIenntteelr.;<b/apc>k
-g<rao uhnrde:fr=g"b#a"( 1c0l,a1s0s,=1"5b,t0n."9>5<)s;vbga cvkiderwoBpo-xf=i"l0t e0r :2b4l u2r4("1 0fpixl)l;=z"-ciunrdreexn:t1C0o0l;obro"r>d<epra-tbho tdt=o"mM:118p.x7 1s o1l9i.d5 cv-a.r8(3- -1b.o2r4d-e1r.)7}1
- .2l.o4g5o-{3f.o0n5t -2s.i4z7e-:11..354r.e0m3;-f1o.n7t7--w.e7i9g-h3t.:2890-0.;7b9a-c1k.g5r3o u0n-d2: l.i7n7e-a3r.-2g7r.a8d2i-e1n.t3(11.3055d-e2g.,3#-a18.5352f-73,.v1a4r-(2-.-5p3iCn4k.)2)5; -1w7e b2k.i9t4- b1a2c.k4g5r o4u.n7d -9c.l3i9pc:.t8e7x-t1;.-5w2e b2k.i4t3--t2e.x4t8- f4i.l1l2--c2o.l5o1r :1t.r2a8n-s.p0a2r e2n.t5}.
-8n7a v3 .a2{9c.o8l7o.r7:8v a0r (2-.-2m6u-t1e.d0)7; t3e.x8t1--d.e9c1o.r6a5t.i0o3n :2n.o4n7e.;2m6a r3g.i6n4- l1e.f9t8:-2.r0e9m.;0f6o-n2t.-1s7i z1e.:208.-92r.e1m5} 
-3n.a8v1 .a0:3h o3v.e0r2{ c2o.l6o5r :4v.a0r3( -2-.t6e8x t4).}0
-4.-h.e0r3o.{0m7i-n.-4h2e i1g.h4t4:-110.03v8h ;2d.i8s3pMl1a3y :3f.l5ecx.;7a3l-i.g8n3- i1t.e9m4s-:1c.e4n6t e2r.;9j4u-s1t.i5f.y1-3c o1n.t1e7n-t.:3c4e n2t.e3r5;-t1e.x0t4- a3l.i1g9n-:.c6e9n.t8e5r-;1p.a8d3d i1n.g5:16-r2e.m9 52 r1e.m4;2b-a.c1k5g-r1o.u1n5d.:4r1a-d2i.a3l5- g1r.a0d5i-e3n.t1(1ezl"l/i>p<s/es vagt> Ctoompi,nrgg bSao(o1n4 7t,o5 1i,O2S3<4/,a0>.
-1<5/)d,itvr>a<n/sspeacrteinotn >5
-0<%f)o}o
-t.ehre>r<od-icvo nctleansts{=m"acxo-nwtiaditnhe:r8"0>0
-p<xd}i
-v. bcaldagses{=d"ilsopgloa"y>:CianrlIinntee-lb<l/odcikv;>b
-a<cdkigvr>o<uan dh:rregfb=a"(/1p4r7i,v5a1c,y2/3"4>,P0r.i2v)a;cbyo rPdoelri:c1yp<x/ as>o<lai dh rregfb=a"(m1a4i7l,t5o1:,c2a3r4i,n0t.e3l)a;pppa@dgdmianigl:.0c.o5mr"e>mC o1nrteamc;tb oUrsd<e/ra->r<a/ddiiuvs>:
-5<0pp xc;lfaosnst=-"sciozpey:r0i.g8h5tr"e>m2;0c2o5l oCra:r#Ian8t5e5lf 7L;LmCa.r gAilnl- broitgthotms: 1r.e5sreermv}e
-dh.1<{/fpo>n
-t<-/sdiizve>:<3/.f5oroetme;rf>o
-n<t/-bwoediyg>h
-t<:/8h0t0m;ll>ine-height:1.1;margin-bottom:1.5rem}
-h1 span{background:linear-gradient(135deg,#a855f7,var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.desc{font-size:1.2rem;color:var(--muted);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
-.btn{display:inline-flex;align-items:center;gap:0.75rem;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;padding:1rem 2rem;border-radius:12px;font-weight:600;font-size:1.1rem;text-decoration:none;box-shadow:0 4px 20px rgba(147,51,234,0.4)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 6px 30px rgba(147,51,234,0.5)}
-.btn svg{width:24px;height:24px}
-.features{padding:6rem 2rem;background:var(--card)}
-.container{max-width:1200px;margin:0 auto}
-.section-title{text-align:center;margin-bottom:4rem}
-.section-title h2{font-size:2.5rem;margin-bottom:1rem}
-.section-title p{color:var(--muted);max-width:600px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
-.card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:2rem}
-.card:hover{border-color:var(--purple)}
-.card h3{font-size:1.25rem;margin:1rem 0 0.75rem}
-.card p{color:var(--muted);font-size:0.95rem}
-.icon{width:48px;height:48px;background:linear-gradient(135deg,var(--purple),var(--pink));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
-.cta{padding:6rem 2rem;text-align:center;background:radial-gradient(ellipse at center,rgba(147,51,234,0.2),transparent 70%)}
-.cta h2{font-size:3rem;font-weight:800;margin-bottom:1rem}
-.cta p{color:var(--muted);font-size:1.2rem;margin-bottom:2rem}
-footer{padding:3rem 2rem;background:var(--card);border-top:1px solid var(--border);text-align:center}
-footer a{color:var(--muted);text-decoration:none;margin:0 1rem}
-footer a:hover{color:var(--text)}
-.copyright{color:var(--muted);font-size:0.85rem;margin-top:1rem}
-@media(max-width:768px){h1{font-size:2.5rem}.grid{grid-template-columns:1fr}}
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarIntel - AI-Powered Car Buying Assistant</title>
+    <meta name="description" content="CarIntel is the first AI-powered car buying app. Get instant vehicle analysis, market values, recall alerts, and negotiation tips.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-card: #1a1a24;
+            --purple-primary: #9333ea;
+            --purple-light: #a855f7;
+            --pink-accent: #d946ef;
+            --green-accent: #22c55e;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --border-color: #2d2d3a;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--purple-light), var(--pink-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: radial-gradient(ellipse at top, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at bottom right, rgba(217, 70, 239, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(147, 51, 234, 0.2);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--purple-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--purple-light), var(--pink-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .coming-soon-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, var(--purple-primary), var(--pink-accent));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 20px rgba(147, 51, 234, 0.4);
+        }
+
+        .coming-soon-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(147, 51, 234, 0.5);
+        }
+
+        .coming-soon-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: var(--bg-card);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--purple-primary);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--purple-primary), var(--pink-accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: radial-gradient(ellipse at center, rgba(147, 51, 234, 0.2) 0%, transparent 70%);
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-copyright {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .footer-links {
+                margin-top: 1rem;
+            }
+
+            .footer-links a {
+                margin: 0 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<nav><div class="logo">CarIntel</div><div><a href="#features">Features</a><a href="/privacy/">Privacy</a><a href="mailto:carintelapp@gmail.com">Contact</a></div></nav>
-  <section class="hero"><div class="hero-content">
-  <div class="badge">First AI-Powered Car Buying App</div>
-  <h1>Your <span>AI Co-Pilot</span> for Buying a Used Car</h1>
-  <p class="desc">Get instant vehicle analysis, market values, recall alerts, and negotiation tips - all powered by advanced AI.</p>
-  <a href="#" class="btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Coming Soon to iOS</a>
-  </div></section>
-  <section class="features" id="features"><div class="container">
-  <div class="section-title"><h2>Everything You Need to Buy Smart</h2><p>CarIntel combines AI analysis with real market data to give you confidence.</p></div>
-<div class="grid">
-<div class="card"><div class="icon">&#128269;</div><h3>Instant VIN Lookup</h3><p>Enter a VIN or scan with your camera. Get vehicle specs instantly.</p></div>
-  <div class="card"><div class="icon">&#129302;</div><h3>AI-Powered Analysis</h3><p>Our AI identifies problems, estimates repairs, and gives buy/avoid recommendations.</p></div>
-<div class="card"><div class="icon">&#128176;</div><h3>Real-Time Market Values</h3><p>See if you're getting a great deal with live market data.</p></div>
-  <div class="card"><div class="icon">&#128737;</div><h3>Safety Alerts</h3><p>Active recall alerts, safety ratings, and complaint history.</p></div>
-<div class="card"><div class="icon">&#129309;</div><h3>Negotiation Helper</h3><p>AI-calculated offer prices and negotiation talking points.</p></div>
-<div class="card"><div class="icon">&#128279;</div><h3>Listing Checker</h3><p>Paste any listing URL to compare against market value.</p></div>
-  </div>
-  </div></section>
-  <section class="cta"><div class="container">
-  <h2>Ready to Buy Smarter?</h2>
-  <p>Join car buyers who shop with confidence using CarIntel.</p>
-<a href="#" class="btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Coming Soon to iOS</a>
-  </div></section>
-  <footer><div class="container">
-  <div class="logo">CarIntel</div>
-  <div><a href="/privacy/">Privacy Policy</a><a href="mailto:carintelapp@gmail.com">Contact Us</a></div>
-  <p class="copyright">2025 CarIntel LLC. All rights reserved.</p>
-</div></footer>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">CarIntel</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="mailto:carintelapp@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">First AI-Powered Car Buying App</div>
+            <h1>The First <span>AI-Powered</span> Car Buying App</h1>
+            <p class="hero-description">
+                Finally, an app built for the buyer. Get instant vehicle analysis, market values, recall alerts, and negotiation tips - all powered by AI.
+            </p>
+            <a href="#" class="coming-soon-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Coming Soon to iOS
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Everything You Need to Buy Smart</h2>
+                <p>CarIntel combines AI analysis with real market data to give you the confidence to make the right decision.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Instant VIN Lookup</h3>
+                    <p>Enter a VIN or scan it with your camera. Get comprehensive vehicle specs including engine, transmission, and fuel economy instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Our advanced AI identifies known problems, estimates repair costs, and gives you a buy/avoid recommendation with test drive tips.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Real-Time Market Values</h3>
+                    <p>See if you're getting a great deal, fair price, or being overpriced with live market data and comparable sales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Safety and Recall Alerts</h3>
+                    <p>Stay informed with active recall alerts from NHTSA, safety ratings, crash test results, and complaint history.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Negotiation Helper</h3>
+                    <p>Get AI-calculated offer prices, walk-away thresholds, and negotiation talking points specific to your vehicle.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Listing Price Checker</h3>
+                    <p>Paste any online car listing URL and we'll extract details, compare to market value, and tell you if it's worth it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="section-container">
+            <h2>Ready to Buy Smarter?</h2>
+            <p>Join thousands of car buyers who shop with confidence using CarIntel.</p>
+            <a href="#" class="coming-soon-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Coming Soon to iOS
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">CarIntel</div>
+                <p class="footer-copyright">2025 CarIntel LLC. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="mailto:carintelapp@gmail.com">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
