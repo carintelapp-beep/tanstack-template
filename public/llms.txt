@@ -1,0 +1,52 @@
+# CarIntel - AI-Powered Car Buying Assistant
+
+> CarIntel is the first AI-powered car buying application for iOS. It helps car buyers make informed decisions with instant vehicle analysis, market values, recall alerts, and negotiation assistance.
+
+## About CarIntel
+
+CarIntel LLC develops mobile applications that leverage artificial intelligence to assist consumers in the car buying process. Our flagship iOS app provides comprehensive vehicle information and AI-driven insights to help buyers negotiate better deals and avoid costly mistakes.
+
+## Key Features
+
+- **Instant VIN Lookup**: Enter or scan a VIN to get comprehensive vehicle specifications including engine, transmission, and fuel economy
+- **AI-Powered Analysis**: Advanced AI identifies known problems, estimates repair costs, and provides buy/avoid recommendations with test drive tips
+- **Real-Time Market Values**: Live market data showing if you're getting a great deal, fair price, or being overpriced with comparable sales
+- **Safety and Recall Alerts**: Active recall alerts from NHTSA, safety ratings, crash test results, and complaint history
+- **Negotiation Helper**: AI-calculated offer prices, walk-away thresholds, and negotiation talking points specific to your vehicle
+- **Listing Price Checker**: Paste any online car listing URL to extract details, compare to market value, and determine if it's worth pursuing
+
+## Product Information
+
+- **App Name**: CarIntel
+- **Platform**: iOS (Available Now)
+- **App Store**: https://apps.apple.com/us/app/carintel/id6758071767
+- **Category**: Automotive / Shopping / Utilities
+- **Developer**: CarIntel LLC
+- **Website**: https://carintel.ai
+- **Contact**: carintelapp@gmail.com
+
+## Target Users
+
+- First-time car buyers seeking guidance
+- Used car shoppers wanting to avoid scams
+- Anyone looking to negotiate better car deals
+- Consumers wanting comprehensive vehicle history and market data
+
+## How CarIntel Works
+
+1. User enters a VIN number or scans it with phone camera
+2. App retrieves comprehensive vehicle data from multiple sources
+3. AI analyzes the vehicle for known issues, recalls, and market positioning
+4. User receives actionable insights including fair market value and negotiation strategies
+5. App provides test drive checklist and questions to ask the seller
+
+## Links
+
+- Homepage: https://carintel.ai
+- Download on App Store: https://apps.apple.com/us/app/carintel/id6758071767
+- Privacy Policy: https://carintel.ai/privacy/
+- Contact: mailto:carintelapp@gmail.com
+
+## Summary
+
+CarIntel is the essential tool for smart car buying. By combining real-time market data with AI-powered analysis, it gives buyers the confidence to make informed decisions and negotiate from a position of strength. Available now on the iOS App Store.
