@@ -1,3 +1,69 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for CarIntel (carintel.ai)
+# Allow all search engines and AI crawlers
+
+# Standard search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# OpenAI crawlers (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic crawler (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google AI (Gemini/Bard)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Microsoft/Copilot
+User-agent: bingbot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Default - allow all other bots
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://carintel.ai/sitemap.xml
+
+# LLMs.txt location (AI-specific content)
+# See: https://carintel.ai/llms.txt
