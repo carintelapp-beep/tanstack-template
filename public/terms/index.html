@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - CarIntel</title>
+    <meta name="description" content="Terms of Service for CarIntel - the AI-powered car buying app.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-card: #1a1a24;
+            --purple-primary: #9333ea;
+            --purple-light: #a855f7;
+            --pink-accent: #d946ef;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --border-color: #2d2d3a;
+        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); line-height: 1.7; }
+        nav { position: fixed; top: 0; left: 0; right: 0; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--border-color); }
+        .nav-logo { font-size: 1.5rem; font-weight: 800; background: linear-gradient(135deg, var(--purple-light), var(--pink-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .container { max-width: 800px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+        .page-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); }
+        .page-header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--purple-light), var(--pink-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .last-updated { color: var(--text-secondary); font-size: 0.9rem; }
+        .intro { color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem; }
+        .toc { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+        .toc h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); }
+        .toc ol { list-style: none; counter-reset: toc-counter; }
+        .toc li { counter-increment: toc-counter; margin-bottom: 0.5rem; }
+        .toc li::before { content: counter(toc-counter) ". "; color: var(--purple-light); font-weight: 600; }
+        .toc a { color: var(--text-secondary); text-decoration: none; transition: color 0.3s; }
+        .toc a:hover { color: var(--purple-light); }
+        .section { margin-bottom: 3rem; }
+        .section h2 { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--purple-primary); display: inline-block; }
+        .section h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 1.5rem 0 0.75rem; }
+        .section p { color: var(--text-secondary); margin-bottom: 1rem; }
+        .section ul { list-style: none; margin-bottom: 1rem; }
+        .section ul li { color: var(--text-secondary); padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+        .section ul li::before { content: ""; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; background: var(--purple-light); border-radius: 50%; }
+        .highlight { background: var(--bg-card); border-left: 3px solid var(--purple-primary); padding: 1rem 1.5rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+        .highlight strong { color: var(--text-primary); }
+        .highlight em { color: var(--text-secondary); }
+        a { color: var(--purple-light); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--pink-accent); }
+        footer { padding: 3rem 2rem; background: var(--bg-card); border-top: 1px solid var(--border-color); }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .footer-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--text-primary); }
+        .footer-copyright { color: var(--text-secondary); font-size: 0.85rem; }
+        @media (max-width: 640px) { .container { padding: 6rem 1.5rem 3rem; } .page-header h1 { font-size: 2rem; } .footer-content { flex-direction: column; gap: 1rem; text-align: center; } .footer-links { margin-top: 1rem; } .footer-links a { margin: 0 1rem; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-logo">CarIntel</a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="mailto:carintelapp@gmail.com">Contact</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last updated January 25, 2026</p>
+        </div>
+        <p class="intro">Welcome to CarIntel! These Terms of Service ("Terms") govern your access to and use of the CarIntel mobile application and related services (collectively, the "Services") provided by CarIntel LLC ("we," "us," or "our"). By accessing or using our Services, you agree to be bound by these Terms.</p>
+        <div class="highlight">
+            <strong>Important:</strong>
+            <em>Please read these Terms carefully before using our Services. If you do not agree to these Terms, you may not access or use the Services. If you have questions, please contact us at <a href="mailto:carintelapp@gmail.com">carintelapp@gmail.com</a>.</em>
+        </div>
+        <div class="toc" id="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#acceptance">Acceptance of Terms</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#account">Account Registration</a></li>
+                <li><a href="#subscription">Subscription and Payments</a></li>
+                <li><a href="#services">Description of Services</a></li>
+                <li><a href="#ai">AI-Powered Features</a></li>
+                <li><a href="#conduct">User Conduct</a></li>
+                <li><a href="#ip">Intellectual Property</a></li>
+                <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+                <li><a href="#liability">Limitation of Liability</a></li>
+                <li><a href="#indemnification">Indemnification</a></li>
+                <li><a href="#termination">Termination</a></li>
+                <li><a href="#changes">Changes to Terms</a></li>
+                <li><a href="#governing">Governing Law</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ol>
+        </div>
+        <div class="section" id="acceptance">
+            <h2>1. Acceptance of Terms</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>By using CarIntel, you agree to these Terms of Service.</em></div>
+            <p>By downloading, installing, or using the CarIntel application, you acknowledge that you have read, understood, and agree to be bound by these Terms. These Terms constitute a legally binding agreement between you and CarIntel LLC.</p>
+            <p>We may update these Terms from time to time. Your continued use of the Services after any changes indicates your acceptance of the updated Terms.</p>
+        </div>
+        <div class="section" id="eligibility">
+            <h2>2. Eligibility</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>You must be at least 18 years old to use our Services.</em></div>
+            <p>You must be at least 18 years of age to use the Services. By using the Services, you represent and warrant that you are at least 18 years old and have the legal capacity to enter into these Terms.</p>
+        </div>
+        <div class="section" id="account">
+            <h2>3. Account Registration</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>You are responsible for maintaining the security of your account.</em></div>
+            <p>To access certain features of the Services, you may need to create an account. You agree to:</p>
+            <ul>
+                <li>Provide accurate, current, and complete information during registration</li>
+                <li>Maintain and promptly update your account information</li>
+                <li>Keep your password secure and confidential</li>
+                <li>Notify us immediately of any unauthorized access to your account</li>
+                <li>Accept responsibility for all activities that occur under your account</li>
+            </ul>
+        </div>
+        <div class="section" id="subscription">
+            <h2>4. Subscription and Payments</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>Premium features require a paid subscription that automatically renews.</em></div>
+            <h3>Free and Premium Tiers</h3>
+            <p>CarIntel offers both free and premium subscription tiers. The free tier provides limited access to basic features, while the premium tier ("CarIntel Premium") unlocks additional features including unlimited vehicle checks, AI-powered analysis, and more.</p>
+            <h3>Auto-Renewal</h3>
+            <p>Premium subscriptions automatically renew at the end of each subscription period (yearly) unless you cancel before the renewal date. You will be charged through your Apple ID account.</p>
+            <h3>Cancellation</h3>
+            <p>You may cancel your subscription at any time through your Apple ID account settings. Cancellation will take effect at the end of your current billing period, and you will retain access to premium features until then.</p>
+            <h3>Refunds</h3>
+            <p>Refund requests are handled by Apple in accordance with their refund policies. We do not directly process refunds for subscriptions purchased through the App Store.</p>
+        </div>
+        <div class="section" id="services">
+            <h2>5. Description of Services</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>CarIntel provides AI-powered tools to help you make informed car buying decisions.</em></div>
+            <p>CarIntel is an AI-powered mobile application designed to assist users in the car buying process. Our Services include:</p>
+            <ul>
+                <li>Vehicle information lookup and analysis</li>
+                <li>Market value estimates and price predictions</li>
+                <li>Vehicle history insights</li>
+                <li>Comparable sales data</li>
+                <li>AI-powered negotiation recommendations</li>
+                <li>PDF report generation</li>
+                <li>Price tracking and alerts</li>
+            </ul>
+        </div>
+        <div class="section" id="ai">
+            <h2>6. AI-Powered Features</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>Our AI features provide estimates and recommendations, not guarantees.</em></div>
+            <p>CarIntel uses artificial intelligence and machine learning to provide vehicle analysis, market predictions, and recommendations. You acknowledge and agree that:</p>
+            <ul>
+                <li>AI-generated content is provided for informational purposes only</li>
+                <li>Market value estimates are approximations based on available data</li>
+                <li>Predictions and recommendations are not guarantees of actual outcomes</li>
+                <li>You should independently verify important information before making purchasing decisions</li>
+                <li>We are not responsible for decisions made based on AI-generated content</li>
+            </ul>
+        </div>
+        <div class="section" id="conduct">
+            <h2>7. User Conduct</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>Use our Services responsibly and lawfully.</em></div>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the Services for any unlawful purpose</li>
+                <li>Attempt to gain unauthorized access to our systems or networks</li>
+                <li>Interfere with or disrupt the Services or servers</li>
+                <li>Reverse engineer, decompile, or disassemble the application</li>
+                <li>Use automated systems to access the Services without permission</li>
+                <li>Resell, redistribute, or commercially exploit the Services</li>
+                <li>Violate any applicable laws or regulations</li>
+            </ul>
+        </div>
+        <div class="section" id="ip">
+            <h2>8. Intellectual Property</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>We own all rights to our Services and content.</em></div>
+            <p>The Services, including all content, features, and functionality, are owned by CarIntel LLC and are protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works based on our Services without our express written permission.</p>
+        </div>
+        <div class="section" id="disclaimer">
+            <h2>9. Disclaimer of Warranties</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>Our Services are provided "as is" without warranties.</em></div>
+            <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+            <p>We do not warrant that the Services will be uninterrupted, error-free, or secure. We do not guarantee the accuracy, completeness, or reliability of any information provided through the Services, including vehicle valuations, market predictions, and AI-generated recommendations.</p>
+        </div>
+        <div class="section" id="liability">
+            <h2>10. Limitation of Liability</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>Our liability is limited to the maximum extent permitted by law.</em></div>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, CARINTEL LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICES.</p>
+            <p>Our total liability for any claims arising from these Terms or your use of the Services shall not exceed the amount you paid to us in the twelve (12) months preceding the claim.</p>
+        </div>
+        <div class="section" id="indemnification">
+            <h2>11. Indemnification</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>You agree to indemnify us against claims arising from your use of the Services.</em></div>
+            <p>You agree to indemnify, defend, and hold harmless CarIntel LLC and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising out of or related to your use of the Services, your violation of these Terms, or your violation of any rights of another.</p>
+        </div>
+        <div class="section" id="termination">
+            <h2>12. Termination</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>We may terminate your access to the Services at any time.</em></div>
+            <p>We reserve the right to suspend or terminate your access to the Services at any time, with or without cause, and with or without notice. Upon termination, your right to use the Services will immediately cease.</p>
+            <p>You may terminate your account at any time by discontinuing use of the Services and canceling any active subscriptions through your Apple ID account settings.</p>
+        </div>
+        <div class="section" id="changes">
+            <h2>13. Changes to Terms</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>We may update these Terms and will notify you of material changes.</em></div>
+            <p>We may modify these Terms at any time. If we make material changes, we will notify you by updating the "Last updated" date at the top of these Terms and, where appropriate, providing additional notice within the app.</p>
+            <p>Your continued use of the Services after any changes constitutes your acceptance of the updated Terms.</p>
+        </div>
+        <div class="section" id="governing">
+            <h2>14. Governing Law</h2>
+            <div class="highlight"><strong>In Short:</strong> <em>These Terms are governed by the laws of the United States.</em></div>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of the Services shall be resolved in the courts of the United States.</p>
+        </div>
+        <div class="section" id="contact">
+            <h2>15. Contact Us</h2>
+            <p>If you have any questions about these Terms of Service, please contact us:</p>
+            <p><strong>CarIntel LLC</strong></p>
+            <p>Email: <a href="mailto:carintelapp@gmail.com">carintelapp@gmail.com</a></p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">CarIntel</div>
+                <p class="footer-copyright">2026 CarIntel LLC. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="/terms/">Terms of Service</a>
+                <a href="mailto:carintelapp@gmail.com">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
